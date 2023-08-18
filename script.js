@@ -14,6 +14,22 @@ function calculateTriangleArea(){
     
 }
 
+// /calculate Ractangle Area 
+function calculateRectangleArea(){
+    //get element id
+    const width = getElementID('rectangle-width');
+    const length = getElementID('rectangle-length');
+    // validate
+    if(isNaN(width) || isNaN(length)){
+        alert('Please insert number');
+        return
+    }
+    //calculate area 
+    const area = width * length;
+    updateValue('rectangle-area', area);
+    addToCalculationEntry('Ractangle', area)
+}
+
 //get element id
 function getElementID(id){
     const elementID = document.getElementById(id);
