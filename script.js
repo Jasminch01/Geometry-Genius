@@ -63,6 +63,23 @@ function calculateEllipseArea(){
 
 }
 
+//calculate Rhombus area
+function calculateRhombusArea(){
+    //get element id
+    const diagonal1 = getElementID('rhombus-diagonal-1');
+    const diagonal2 = getElementID('rhombus-diagonal-2');
+    // validate
+    if(isNaN(diagonal1) || isNaN(diagonal2)){
+        alert('Please insert number');
+        return
+    }
+    //calculate area 
+    const area = 0.5 * diagonal1 * diagonal2;
+    const areaTwoDecimal = area.toFixed(2)
+    updateValue('rhombus-area', areaTwoDecimal);
+    addToCalculationEntry('Rhombus', areaTwoDecimal)
+}
+
 //get element id
 function getElementID(id){
     const elementID = document.getElementById(id);
