@@ -29,6 +29,21 @@ function calculateRectangleArea(){
     updateValue('rectangle-area', area);
     addToCalculationEntry('Ractangle', area)
 }
+// /calculate parallelogram
+function calculateParallelogramArea(){
+    //get element id
+    const base = getElementID('parallelogram-base');
+    const height = getElementID('parallelogram-height');
+    // validate
+    if(isNaN(height) || isNaN(base)){
+        alert('Please insert number');
+        return
+    }
+    //calculate area 
+    const area = base * height;
+    updateValue('parallelogram-area', area);
+    addToCalculationEntry('Parallelogram', area)
+}
 
 //get element id
 function getElementID(id){
