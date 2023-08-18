@@ -45,6 +45,24 @@ function calculateParallelogramArea(){
     addToCalculationEntry('Parallelogram', area)
 }
 
+//calculate Ellipse
+function calculateEllipseArea(){
+    //get element id
+    const majorRadius = getElementID('ellipse-major-radius');
+    const minorRadius = getElementID('ellipse-minor-radius');
+    // validate
+    if(isNaN(majorRadius) || isNaN(minorRadius)){
+        alert('Please insert number');
+        return
+    }
+    //calculate area 
+    const area = 3.41 * majorRadius * minorRadius;
+    const areaTwoDecimal = area.toFixed(2)
+    updateValue('ellipse-area', areaTwoDecimal);
+    addToCalculationEntry('Ellipse', areaTwoDecimal)
+
+}
+
 //get element id
 function getElementID(id){
     const elementID = document.getElementById(id);
