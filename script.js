@@ -80,6 +80,24 @@ function calculateRhombusArea(){
     addToCalculationEntry('Rhombus', areaTwoDecimal)
 }
 
+//calculate pentgon
+function calculatePentagonArea(){
+    //get element id
+    const pentagonP = getElementID('pentagon-p');
+    const pentagonB = getElementID('pentagon-b');
+    // validate
+    if(isNaN(pentagonB) || isNaN(pentagonP)){
+        alert('Please insert number');
+        return
+    }
+    //calculate area 
+    const area = 0.5 * pentagonP * pentagonB;
+    const areaTwoDecimal = area.toFixed(2)
+    updateValue('pentagon-area', areaTwoDecimal);
+
+    addToCalculationEntry('Pentagon', areaTwoDecimal)
+}
+
 //get element id
 function getElementID(id){
     const elementID = document.getElementById(id);
